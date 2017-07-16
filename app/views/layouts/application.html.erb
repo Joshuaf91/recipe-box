@@ -9,6 +9,24 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <%= link_to "myRecipes", "", class: "btn btn-lg btn-success", id: "logo" %>
+      <div class="nav_item">
+        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
+      </div>
+      <div class="nav_item">
+        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
+      </div>
+      <div class="nav_item">
+        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+      <footer class="footer">
+        <p>&copy; Recipe Box 2017</p>
+      </footer>
+    </div>
   </body>
 </html>
