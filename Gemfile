@@ -33,6 +33,7 @@ gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bcrypt', '3.1.11'
 gem 'fog', '1.40.0'
+gem "fog-aws"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

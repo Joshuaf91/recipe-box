@@ -363,6 +363,7 @@ DEPENDENCIES
   carrierwave (= 1.1.0)
   coffee-rails (~> 4.2)
   fog (= 1.40.0)
+  fog-aws
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
