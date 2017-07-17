@@ -15,11 +15,17 @@ class ChefsController < ApplicationController
   end
 
   def edit
-    
+    @chef = Chef.find(params[:id])
   end
 
   def update
-    
+    @chef = Chef.find(params[:id])
+    if @chef.update(chef_params)
+      flash[:success] = "your account has been updated succesfully"
+      redirect_to recipes_path #change to chef page
+    else
+      render edit
+    end
   end
 
   private
