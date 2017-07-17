@@ -32,7 +32,7 @@ gem 'mini_magick', '4.8.0'
 gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bcrypt', '3.1.11'
-gem 'fog', '1.44.3'
+gem 'fog', '1.40.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
