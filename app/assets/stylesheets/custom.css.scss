@@ -27,6 +27,10 @@ body {
   margin-top: 25px; 
 }
 
+ul.nav_item {
+  list-style-type: none;
+}
+
 #logo:hover {
   color: white;
   text-decoration: none;
@@ -52,3 +56,4 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
