@@ -20,7 +20,7 @@ class RecipesController < ApplicationController
     @recipe.chef = current_user
 
     if @recipe.save
-      flash[:success] = "Your recipe was created succesfully!"
+      flash[:success] = "Your recipe was created successfully!"
       redirect_to recipes_path
     else
       render :new
@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
 
   def update
     if @recipe.update(recipe_params)
-      flash[:success] = "Your recipe was updated succesfully!"
+      flash[:success] = "Your recipe was updated successfully!"
       redirect_to recipe_path(@recipe)
     else
       render :edit
@@ -43,16 +43,17 @@ class RecipesController < ApplicationController
   def like
     like = Like.create(like: params[:like], chef: current_user, recipe: @recipe)
     if like.valid?
-      flash[:success] = "your selection was succesfull"
+      flash[:success] = "your selection was successfull"
       redirect_back fallback_location: root_path
     else
       flash[:danger] = "you can only Like/Dislike once"
+      redirect_back fallback_location: root_path
     end
   end
 
   private
     def recipe_params
-      params.require(:recipe).permit(:name, :summary, :description, :picture)
+      params.require(:recipe).permit(:name, :summary, :description, :picture, style_ids: [], ingredient_ids: [])
     end
 
     def set_recipe
