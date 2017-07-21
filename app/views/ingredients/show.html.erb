@@ -1,12 +1,3 @@
-<%= render "shared/page_title", title: "Recipes for : " + @ingredient.name + " food" %>
-
-<ul class="nav nav-tabs">
-  <li class="active">
-    <%= link_to "Recipes", recipes_path %>
-  </li>
-  <li>
-    <%= link_to "Chefs", chefs_path %>
-  </li>
-</ul>
+<%= render "shared/page_title", title: "Ingredients for : " + @ingredient.name + " food" %>
 
 <%= render "shared/list_recipes", recipes: @recipes %>
